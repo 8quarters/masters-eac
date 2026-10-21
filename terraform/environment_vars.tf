@@ -1,10 +1,10 @@
 variable "mysql_username" {
-  description = "DB Admin username"
+  description = "DB username"
   type        = string
 }
 
 variable "mysql_password" {
-  description = "DB Admin password"
+  description = "DB password"
   type        = string
   sensitive   = true
 }
