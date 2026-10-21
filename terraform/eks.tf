@@ -34,8 +34,8 @@ module "eks" {
       instance_types                        = ["m5.large"]
       attach_cluster_primary_security_group = false
 
-      instance_types = ["t2.small"]
-      capacity_type  = "SPOT"
+      instance_types = ["m5.large"]
+      capacity_type  = "ON_DEMAND"
     }
   }
 
