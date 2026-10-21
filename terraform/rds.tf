@@ -29,7 +29,7 @@ resource "aws_db_subnet_group" "masters_subnet_group" {
 # Create an Aurora MySQL Cluster (Single Writer Instance)
 resource "aws_db_instance" "masters_db" {
   engine                 = "mysql"
-  engine_version         = "8.0.36"
+  engine_version         = "8.0"
   db_name                = "mastersdatabase"
   identifier             = "mastersdatabase"
   instance_class         = "db.t3.micro"
