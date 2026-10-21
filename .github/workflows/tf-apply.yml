@@ -63,7 +63,7 @@ jobs:
     - name: Checkout config repo
       uses: actions/checkout@v4
       with:
-        repository: yletter/config-store
+        repository: 8quarters/config-store
         token: ${{ secrets.YGITHUB_TOKEN }}
         path: config-store
 
