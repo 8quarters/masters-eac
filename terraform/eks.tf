@@ -26,7 +26,7 @@ module "eks" {
   eks_managed_node_groups = {
     amc-cluster-wg = {
       min_size     = 1
-      max_size     = 2
+      max_size     = 4
       desired_size = 1
 
       # Merged from former eks_managed_node_group_defaults
