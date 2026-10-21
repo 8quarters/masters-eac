@@ -1,5 +1,5 @@
 module "eks" {
-  count   = 1
+  #count   = 1
   source  = "terraform-aws-modules/eks/aws"
   version = "21.29.0"
 
