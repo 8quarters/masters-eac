@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "eks-yuvaraj"
+    bucket = "masters-state-files"
     region = "us-east-1"
-    key = "eac-chaos/terraform.tfstate"
+    key = "masters-eac/terraform.tfstate"
     profile = "saml"
   }
 }
