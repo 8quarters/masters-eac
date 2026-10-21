@@ -38,7 +38,7 @@ jobs:
         aws s3 ls
 
     - name: Terraform Init
-      run: terraform init
+      run: terraform init -upgrade
 
     - name: Terraform Validate
       run: terraform validate
