@@ -16,7 +16,17 @@ module "eks" {
   
   vpc_id                   = module.vpc.vpc_id
   subnet_ids               = module.vpc.private_subnets
-  
+# ADD THIS BLOCK TO CREATE EC2 WORKER NODES:
+  eks_managed_node_groups = {
+    general = {
+      name            = "general-node-group"
+      instance_types  = ["t3.medium"] # Change to your preferred instance type
+      
+      min_size     = 1
+      max_size     = 3
+      desired_size = 2
+    }
+  }
   tags = {
     Environment = "dev"
     Terraform   = "true"
