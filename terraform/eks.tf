@@ -9,11 +9,6 @@ module "eks" {
 
   enable_cluster_creator_admin_permissions = true
 
-  create_auto_mode_iam_resources = true
-  compute_config = {
-    enabled = true
-  }
-
   addons = {
     coredns = {
       most_recent = true
@@ -36,14 +31,10 @@ module "eks" {
       max_size     = 4
       desired_size = 1
 
-      # Merged from former eks_managed_node_group_defaults
       ami_type                              = "AL2023_x86_64_STANDARD"
       instance_types                        = ["m5.large"]
       attach_cluster_primary_security_group = false
-
-      instance_types = ["m5.large"]
-      capacity_type  = "ON_DEMAND"
+      capacity_type                         = "ON_DEMAND"
     }
   }
-
 }
